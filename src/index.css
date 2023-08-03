@@ -275,11 +275,11 @@ body {
   --_logo-color: hsl(0, 0%, 100%);
   --_nav-link-color: hsl(0, 0%, 100%);
   font-family: -apple-system, BlinkMacSystemFont, 'NotoSansJP';
-  font-size: 24px;
+  font-size: 1.5vw;
   background-color:rgba(34, 16, 14,1);
   background-image: url("star.png");
 
-  padding: 1rem;
+  padding: 2rem;
   position: fixed;
   z-index:200;
   height:100%;
@@ -292,7 +292,7 @@ body {
 
 .primary-header .small-text {
   font-size: 12px;
-  margin-left: 35px;
+  margin-left: 1vw;
   margin-bottom:3px;
   margin-top:3px;
 }
@@ -335,15 +335,14 @@ body {
 .primary-header p {
   color:white;
   font-size:30px;
-  margin:40px;
-  margin-left:35px;
+  margin:1vw;
+  margin-left:1vw;
 }
 
 a {
   color: var(--_nav-link-color);
   text-decoration: none;
   transition:0.5s;
-  margin-left:25px;
 }
 
 .primary-header ul {
