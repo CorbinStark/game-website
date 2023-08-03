@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
+import { useEffect, useState } from "react";
 import PrimaryHeader from './PrimaryHeader';
 import SecondaryHeader from './SecondaryHeader';
 import Carousel from './Carousel';
@@ -32,16 +33,40 @@ function BigRedText(props) {
 export default class App extends React.Component {
     state = {
       loading: true,
-      showModal:false
+      showModal:false,
+      width: window.innerWidth,
+      heigth: window.innerHeight
     };
   
     componentDidMount() {
       // this simulates an async action, after which the component will render the content
       demoAsyncCall().then(() => this.setState({ loading: false }));
+      const updateSize = () => {
+        this.setState({width: window.innerWidth});
+        this.setState({height: window.innerHeight});
+      }
+      window.addEventListener('resize', updateSize);
+      return () => window.removeEventListener('resize', updateSize);
+    }
+
+    componentDidUpdate() {
+      const updateSize = () => {
+        this.setState({width: window.innerWidth});
+        this.setState({height: window.innerHeight});
+      }
+      window.addEventListener('resize', updateSize);
+      return () => window.removeEventListener('resize', updateSize);
     }
     
     render() {
       const { loading } = this.state;
+
+      const bodyStyleNone = {
+        marginLeft:'auto'
+      };
+      const bodyStyleMargin = {
+        marginLeft:'17vw',
+      };
       
       if(loading) { // if your component doesn't have to wait for an async action, remove this block 
         return null; // render null when app is not ready
@@ -50,11 +75,17 @@ export default class App extends React.Component {
       if(this.state.showModal) {
 
       } else {
+
         return (
           <div class="everything">
+          {/* Use the fact that && statements terminate early if a condition is false to only include PrimaryHeader if the width is > 700 */}
+          {
+            this.state.width > 700 &&
+            <PrimaryHeader />
+          }
           {/*<PrimaryHeader />*/}
           {/*<body style="margin-left:8.3vw;">*/}
-          <body>
+          <body style={this.state.width > 700 ? bodyStyleMargin : bodyStyleNone}>
           <SecondaryHeader />
 
           <h1 class="text-gradient">8.29.2023</h1>
