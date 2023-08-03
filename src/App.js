@@ -115,7 +115,7 @@ export default class App extends React.Component {
                   <Carousel images={["manor1.png", "manor2.png", "boukensha_guild.png", "machi.png", "oshiro.png"]} />
                   <h3>世界観</h3>
                   <p style={{marginTop:'-25px', fontSize:'16px'}}>
-                    舞台は剣と魔法の世界、エヴァリオ。ここでは仲間と会ったり、クエストを受けたり、冒険したりすることができる。表には平和な世界だと思いこんでいるようだが、水面下には影に覆うものは密かに這い寄る。
+                    舞台は剣と魔法の世界、エヴァリオ。ここでは仲間と会ったり、クエストを受けたり、冒険したりすることができる。表には平和な世界に見えるが、水面下には影に覆うものは密かに這い寄る。
                   </p>
                 </div>
                 <div class="grid-item">
