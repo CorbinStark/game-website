@@ -101,7 +101,7 @@ export default class App extends React.Component {
                   {/*<h3>Engaging Turn-Based Combat</h3>*/}
                   <h3>バトル</h3>
                   <p style={{marginTop:'-25px', fontSize:'16px'}}>
-                    4タイプの属性攻撃が存在する。敵によって弱点が異なるので、敵にあわせて効果的な攻撃を選ぶ。クラスによって、特別なスキルを習得できるし、レベルアップするとスキルポイントと引き換えに鑑定、加護、ステータスアップなど様々なスキルをGET!
+                    4タイプの属性攻撃が存在する。敵によって弱点が異なるので、敵にあわせて効果的な攻撃を選べる。クラスによって、特別なスキルを習得できるし、レベルアップするとスキルポイントと引き換えに鑑定、加護、ステータスアップなど様々なスキルをGET!
                   </p>
                 </div>
                 <div class="grid-item">
@@ -115,7 +115,7 @@ export default class App extends React.Component {
                   <Carousel images={["manor1.png", "manor2.png", "boukensha_guild.png", "machi.png", "oshiro.png"]} />
                   <h3>世界観</h3>
                   <p style={{marginTop:'-25px', fontSize:'16px'}}>
-                    舞台は剣と魔法の世界、エヴァリオ。ここでは仲間と会ったり、クエストを受けたり、冒険に行ったりすることができる。表には平和な世界だと思いこんでいるようだが、水面下には影に覆うものは密かに這い寄る。
+                    舞台は剣と魔法の世界、エヴァリオ。ここでは仲間と会ったり、クエストを受けたり、冒険したりすることができる。表には平和な世界だと思いこんでいるようだが、水面下には影に覆うものは密かに這い寄る。
                   </p>
                 </div>
                 <div class="grid-item">
