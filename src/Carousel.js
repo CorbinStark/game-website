@@ -35,7 +35,7 @@ export default function Carousel(props) {
 
                 <div class={imageOpacity == 1 ? "mySlides" : "mySlidesFade"}>
                     <div style={{position:'absolute', padding:'15px', fontSize:'16px'}} class="image-index">{currentImage+1} / {props.images.length}</div>
-                    <a onClick={() => setModalOpen(true)} href="#modal"><img src={props.images[currentImage]} style={{borderRadius:'15px'}}></img></a>
+                    <img src={props.images[currentImage]} style={{borderRadius:'15px'}}></img>
                 </div>
 
                 <a class="prev" onClick={() => clickNextButton()}>&#10094;</a>
